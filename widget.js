@@ -215,7 +215,7 @@
       if (!el) { clearInterval(petAnim); return; }
       frame = frame === 1 ? 2 : 1;
       el.src = imgUrl(`pet_happy_${frame}.png`);
-    }, 333);
+    }, 500);
 
     const tick = setInterval(() => {
       remaining--;
