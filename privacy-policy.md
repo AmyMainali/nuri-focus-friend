@@ -1,3 +1,8 @@
+---
+layout: default
+title: Privacy Policy
+---
+
 # Privacy Policy — Nuri: Focus Friend
 
 **Last updated: May 2026**
