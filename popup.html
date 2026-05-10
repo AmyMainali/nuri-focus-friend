@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="title-bar">
+      <span class="title">NURI</span>
+      <span id="score-display" class="score-display">100%</span>
+    </div>
+
+    <div class="tracking-bar">
+      <div class="tracking-left">
+        <div id="tracking-dot" class="tdot tdot-off"></div>
+        <span id="tracking-label">NOT TRACKING</span>
+      </div>
+      <button id="toggle-btn" class="toggle-btn start">START</button>
+    </div>
+
+    <div class="pet-section">
+      <div id="popup-pet-box" class="popup-pet-box">
+        <img id="popup-pet-img" src="" alt="Nuri" />
+      </div>
+      <div class="mood-info">
+        <div id="popup-mood-name" class="popup-mood-name">HAPPY</div>
+        <div id="popup-mood-msg" class="popup-mood-msg">Loading...</div>
+      </div>
+    </div>
+
+    <div class="section-label">TODAY</div>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-dot green"></div>
+        <div class="stat-title">FOCUSED</div>
+        <div class="stat-val" id="focus-time">0s</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-box">
+        <div class="stat-dot red"></div>
+        <div class="stat-title">DISTRACTED</div>
+        <div class="stat-val" id="distract-time">0s</div>
+      </div>
+    </div>
+
+    <div class="section-label">NEXT BREAK IN</div>
+    <div class="break-box">
+      <span id="break-countdown">--:--</span>
+    </div>
+
+    <div class="section-label">SETTINGS</div>
+    <div class="settings-block">
+      <div class="setting-row">
+        <label>FOCUS GOAL (MIN)</label>
+        <input id="focus-goal-input" type="number" min="1" max="240" value="60" />
+      </div>
+      <div class="setting-row">
+        <label>BREAK LENGTH (MIN)</label>
+        <input id="break-dur-input" type="number" min="1" max="30" value="2" />
+      </div>
+      <button id="save-btn">SAVE</button>
+    </div>
+
+    <button id="show-widget-btn" class="show-widget-btn">SHOW NURI</button>
+    <button id="reset-btn" class="reset-btn">RESET TODAY</button>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

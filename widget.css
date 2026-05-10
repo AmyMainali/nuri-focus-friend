@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
+
+#nuri-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483646;
+  font-family: 'Pixelify Sans', monospace;
+  user-select: none;
+}
+
+#nuri-inner {
+  background: #ffffff;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  width: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+#nuri-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 6px 5px 7px;
+  border-bottom: 2px solid #000;
+  background: #fff;
+  cursor: grab;
+}
+
+#nuri-header:active { cursor: grabbing; }
+
+#nuri-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.08em;
+}
+
+#nuri-header-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#nuri-score {
+  font-size: 9px;
+  font-weight: 700;
+  color: #4ADE80;
+}
+
+#nuri-close-btn {
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 1px;
+}
+
+#nuri-close-btn:hover { color: #f87171; }
+
+#nuri-pet-box {
+  position: relative;
+  width: 100%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #000;
+  background: #e8f8e8;
+}
+
+.nuri-frame {
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#nuri-frame1 { animation: nuri-f1 0.5s  steps(1) infinite; }
+#nuri-frame2 { animation: nuri-f2 0.5s  steps(1) infinite; }
+
+@keyframes nuri-f1 {
+  0%,  49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes nuri-f2 {
+  0%,  49% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+#nuri-mood-tag {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 7px;
+  font-weight: 700;
+  color: #000;
+  padding: 1px 6px;
+  border: 1.5px solid #000;
+  white-space: nowrap;
+  background: #4ADE80;
+}
+
+#nuri-timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 4px 4px;
+  border-bottom: 2px solid #000;
+  gap: 1px;
+}
+
+#nuri-timer-label {
+  font-size: 7px;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 0.1em;
+}
+
+#nuri-timer {
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.04em;
+}
+
+#nuri-stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 4px;
+  border-bottom: 2px solid #000;
+}
+
+.nuri-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.nuri-sdot {
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #000;
+}
+
+.nuri-slabel {
+  font-size: 6px;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 0.05em;
+}
+
+.nuri-sval {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nuri-sdivider {
+  width: 2px;
+  height: 26px;
+  background: #000;
+}
+
+#nuri-toggle-btn {
+  width: 100%;
+  padding: 7px 0;
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.1em;
+  border: none;
+  border-top: 2px solid #000;
+  cursor: pointer;
+  background: #4ADE80;
+  transition: filter 0.1s;
+}
+
+#nuri-toggle-btn:hover  { filter: brightness(0.88); }
+#nuri-toggle-btn:active { filter: brightness(0.75); }
+
+/* ── BREAK OVERLAY ───────────────────────────────────────── */
+
+#nuri-break-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(184, 212, 240, 0.80);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pixelify Sans', monospace;
+}
+
+#nuri-break-card {
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 240px;
+}
+
+#nuri-break-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.08em;
+  border-bottom: 2.5px solid #000;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#nuri-break-pet {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  background: #e8f8e8;
+  padding: 6px;
+}
+
+#nuri-break-sub {
+  font-size: 10px;
+  color: #333;
+  text-align: center;
+  line-height: 1.8;
+}
+
+#nuri-break-timer {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  border: 2.5px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  padding: 4px 16px;
+  letter-spacing: 0.04em;
+}
+
+#nuri-break-skip {
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+  padding: 5px 18px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+
+#nuri-break-skip:hover {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
